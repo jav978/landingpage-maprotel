@@ -1,0 +1,57 @@
+---
+import '@fontsource/bakbak-one';
+import '@fontsource-variable/montserrat';
+
+import { Image } from 'astro:assets';
+import ImageAbout from '@assets/agente2.jpg';
+
+interface Props {
+	title: string;
+	
+
+}
+
+const {  title } = Astro.props;
+
+---
+
+<section class="dark:bg-gradient-to-r  dark:to-slate-700" id="about">
+  
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <div class="">
+        <Image  src={ImageAbout} class="rounded-2xl h-[100%] w-[100%] ml-auto  lg:block" alt="Agent image" /> 
+      </div>
+
+      <div class="w-full flex flex-col items-center lg:items-start">    
+        <h1 class="text-3xl  lg:leading-none lg:text-start font-bakbak text-center text-black lg:text-4xl p-2 dark:text-white">
+          {title}
+        </h1>
+        <p class="mb-4 px-4 mt-8  text-justify lg:text-justify  text-lg font-normal  text-black lg:text-2xl sm:px-16 lg:px-2 dark:text-white">
+         <span class="dark:text-white font-bold"> Maprotel</span> es una empresa de Servicios Profesionales, Consultoría en IT (Informática y Telecomunicaciones) con mas de 15 años de experiencia en el mercado.  
+         
+        </p>
+        <p class="lg:text-justify px-4 mt-8  text-justify  text-lg font-normal  text-black dark:text-white lg:text-2xl sm:px-16 lg:px-2">                   
+          Orientada a servicios y aplicaciones de innovación enfocados a mejorar su Atención Cliente e impulsar sus ventas.
+         </p>           
+      </div>      
+    </div>
+  </section>
+  
+  <style>	
+
+    h1 {
+      font-family: 'Bakbak One', system-ui;
+    }
+
+    span {
+      font-family: 'Montserrat Variable', system-ui;
+      font-weight: bold;
+      color: #000000;
+    }
+
+    p {
+  font-family: 'Montserrat Variable', sans-serif;
+}
+  
+  </style>
+    

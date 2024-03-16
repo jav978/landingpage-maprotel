@@ -1,0 +1,36 @@
+---
+//import {cardData } from '../data/card-data.js';
+import cardData  from '../data/card-data.json';
+
+
+import '@fontsource/bakbak-one';
+import '@fontsource-variable/montserrat';
+
+---
+<section class="dark:bg-gradient-to-r  dark:to-slate-700" id="profolio">
+	<h1 class="text-3xl text-center lg:text-4xl mb-10 mt-4 dark:text-white px-8 font">Portafolio de Productos y Servicios</h1>
+
+	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10  mx-4 lg:mx-20">		
+		  {cardData.map(card => (
+			<div class="rounded-3xl  shadow-lg dark:shadow-lg overflow-hidden h-65">
+				<div class=" mx-auto text-centerddark:bg-slate-400">
+					<img   class="bg-slate-50 p-4 h-60 w-[100%] dark:bg-stone-100" src={card.cover} alt={card.title} />
+			 	 </div>	
+				<div class="p-4 bg-sky-500 h-[100%] dark:bg-slate-700 ">
+					<h3 class="text-xl font-bold mb-4 text-center  text-white">{card.title.toUpperCase()}</h3>
+					<p class="px-2 dak:text-whiter  text-center font-normal text-white">{card.desc}</p>
+				</div>
+			</div>
+		  ))}
+		</div>
+</section>
+
+<style>
+
+h1,h2 {
+		font-family: 'Bakbak One', system-ui;
+		}
+		p {
+  font-family: 'Montserrat Variable', sans-serif;
+}
+</style>

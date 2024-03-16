@@ -1,0 +1,81 @@
+---
+import "@fontsource/bakbak-one";
+
+// Importa el componente Image y la imagen
+import { Image } from 'astro:assets';
+import LogoSarem from "@assets/logo-saren.png"; 
+import LogoEclipse from "@assets/Elipse-Logo-Web-Azul.png";
+import LogoLicoresMundiales from "@assets/logo-2lm.png";
+import LogoSeniat from "@assets/logo-seniat.svg";
+import LogoCentroMedico from "@assets/logo-centro-medico-docente-la-trinidad.svg";
+import LogoNet1 from "@assets/net-1.png";
+
+
+
+
+
+---
+
+<article
+    class="w-full flex flex-wrap justify-center gap-10 lg:mb-10 dark:bg-gradient-to-r dark:to-slate-700"
+    id="cliente"
+>
+    
+    <div class="flex flex-wrap lg:flex-col justify-center gap-5 lg:gap-10">
+        <h1 class="text-2xl text-center lg:text-4xl p-2 mt-8 dark:text-white">
+            Principales Clientes
+        </h1>
+
+        <p class="text-center lg:text-xl dark:text-white px-8">
+            En <span class="font-bold"> Maprotel</span> servimos a una amplia gama
+            de clientes, desde startups hasta grandes empresas.
+        </p>
+    </div>
+
+    <div
+        class="flex flex-col lg:flex-row gap-y-15 gap-20 md:gap-15 items-center justify-center flex-wrap"
+    >
+        <Image
+            class="w-[50px] grayscale hover:grayscale-0 hover:scale-125"
+            src={LogoSarem}
+            alt="Logo Saren"
+        />
+
+        <Image
+            class="w-[200px] lg:w-[150px] grayscale hover:grayscale-0 hover:scale-125"
+            src={LogoEclipse}
+            alt="Logo Eclipse"
+        />
+
+        <Image
+            class="w-[200px] lg:w-[150px] grayscale hover:grayscale-0 hover:scale-125"
+            src={LogoSeniat}
+            alt="Logo Seniat"
+        />
+        <Image
+            class="w-[200px] lg:w-[160px] grayscale hover:grayscale-0 hover:scale-125"
+            src={LogoLicoresMundiales}
+            alt="Logo licores mundiales"
+        />
+        <Image
+            class="w-[200px] lg:w-[150px] grayscale hover:grayscale-0 hover:scale-125"
+            src={LogoCentroMedico}
+            alt="Logo Centro medico"
+        />
+        <Image
+            class="w-[200px] lg:w-[120px] grayscale hover:grayscale-0 hover:scale-125"
+            src={LogoNet1}
+            alt="Logo net 1"
+        />
+    </div>
+</article>
+
+<style>
+    h1,
+    h2 {
+        font-family: "Bakbak One", system-ui;
+    }
+    p {
+        font-family: "Montserrat Variable", sans-serif;
+    }
+</style>
